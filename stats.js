@@ -1,18 +1,20 @@
 const os = require('os')
 // console.log(os.platform())
 
+//Importando função
+const log = require('./logger')
+
 setInterval(() =>{
 
-const {freemem, totalmem} = os
+    const {freemem, totalmem} = os
 
-// console.log(`${parseInt(freemem() / 1024 / 1024)} MB disponíveis de` , `${parseInt(totalmem()/1024/1024)} MB`)
+    // console.log(`${parseInt(freemem() / 1024 / 1024)} MB disponíveis de` , `${parseInt(totalmem()/1024/1024)} MB`)
 
-const total = parseInt(totalmem() / 1024 / 1024)
-const mem = parseInt(freemem() / 1024 / 1024)
+    const total = parseInt(totalmem() / 1024 / 1024)
+    const mem = parseInt(freemem() / 1024 / 1024)
+    const percents = parseInt(100-((mem / total) * 100))
 
-const percents = parseInt(100-((mem / total) * 100))
-
-// console.log(mem, total, percents)
+    // console.log(mem, total, percents)
 
 const stats = {
     free: `${mem} MB`,
@@ -23,4 +25,6 @@ console.clear()
 console.log("=== PC Stats ===")
 console.table(stats)
 //console.log(stats)
+
+log (`${JSON.stringify(stats)}\n`)
 },1000)

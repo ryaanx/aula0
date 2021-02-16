@@ -1,0 +1,24 @@
+{
+  "name": "aula0_http",
+  "version": "1.0.0",
+  "description": "- Stats.js\r - Server.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon http/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryaanx/aula0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryaanx/aula0/issues"
+  },
+  "homepage": "https://github.com/ryaanx/aula0#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
